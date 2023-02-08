@@ -1,7 +1,11 @@
-# SOLID - SINGLE RESPONSABILITY PRINCIPE
-# Single responsabiliy principe on practice using example c#:
+# The **SOLID** principles are a set of design guidelines for writing maintainable and scalable software.
 
-The SRP it's the idea that classes should have only a single reason to change. Multiple reasons for change indicate more tightly-coupled designs that are more rigid and harder to maintain.
+**S**ingle Responsibility Principle: *A class should only have one reason to change*.
 
-Class with single functionalities
-Multiple responsibilities are a “code smell” and hint at a poor software design
+**O**pen/Closed Principle: *Software entities should be open for extension but closed for modification*.
+
+**L**iskov Substitution Principle: *Subtypes must be substitutable for their base types*.
+
+**I**nterface Segregation Principle: *Clients should not be forced to depend on interfaces they don't use*.
+
+**D**ependency Inversion Principle: *High-level modules should not depend on low-level modules, both should depend on abstractions*.
