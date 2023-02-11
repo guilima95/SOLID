@@ -5,7 +5,7 @@ using System.Data;
 namespace SOLID.SRP.After.Repositories;
 public class ClientRepository
 {
-    public void AddClient(Client client)
+    public static void AddClient(Client client)
     {
         using var connection = new SqlConnection();
 

@@ -13,6 +13,43 @@ public class Client
 
     public void AddClient()
     {
+        ValidClient();
+
+        using var connection = new SqlConnection();
+
+        var sqlCommand = new SqlCommand();
+        AddClientOnDb(connection, sqlCommand);
+
+        var mail = new MailMessage("xpto@company.com", Email);
+        var client = new SmtpClient
+        {
+            Port = 25,
+            DeliveryMethod = SmtpDeliveryMethod.Network,
+            UseDefaultCredentials = false,
+            Host = "smtp.google.com"
+        };
+
+        mail.Subject = "Welcome to";
+        mail.Body = "Congratulations! You are registered.";
+        client.Send(mail);
+    }
+
+    private void AddClientOnDb(SqlConnection connection, SqlCommand sqlCommand)
+    {
+        connection.ConnectionString = "connectionString";
+        sqlCommand.Connection = connection;
+        sqlCommand.CommandType = CommandType.Text;
+        sqlCommand.CommandText = "INSERT INTO Client (Name, Email, Date) Values (@name, @email, @date)";
+        sqlCommand.Parameters.AddWithValue("name", Name);
+        sqlCommand.Parameters.AddWithValue("email", Email);
+        sqlCommand.Parameters.AddWithValue("date", Date);
+
+        connection.Open();
+        sqlCommand.ExecuteNonQuery();
+    }
+
+    private void ValidClient()
+    {
         if (string.IsNullOrEmpty(Email))
         {
             throw new ArgumentNullException(nameof(Email));
@@ -27,34 +64,5 @@ public class Client
         {
             throw new ArgumentNullException(nameof(Email));
         }
-
-        using var connection = new SqlConnection();
-
-        var sqlCommand = new SqlCommand();
-
-        connection.ConnectionString = "connectionString";
-        sqlCommand.Connection = connection;
-        sqlCommand.CommandType = CommandType.Text;
-        sqlCommand.CommandText = "INSERT INTO Client (Name, Email, Date) Values (@name, @email, @date)";
-
-        sqlCommand.Parameters.AddWithValue("name", Name);
-        sqlCommand.Parameters.AddWithValue("email", Email);
-        sqlCommand.Parameters.AddWithValue("date", Date);
-
-        connection.Open();
-        sqlCommand.ExecuteNonQuery();
-
-        var mail = new MailMessage("xpto@company.com", Email);
-        var client = new SmtpClient
-        {
-            Port = 25,
-            DeliveryMethod = SmtpDeliveryMethod.Network,
-            UseDefaultCredentials = false,
-            Host = "smtp.google.com"
-        };
-
-        mail.Subject = "Welcome to";
-        mail.Body = "Congratulations! You are registered.";
-        client.Send(mail);
     }
 }
