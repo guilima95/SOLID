@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.SRP", "SOLID.SRP\SOLID.SRP.csproj", "{23F5180A-6EEA-407C-BAE9-BBB5024B69E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID.SRP", "SOLID.SRP\SOLID.SRP.csproj", "{23F5180A-6EEA-407C-BAE9-BBB5024B69E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.OCP", "SOLID.OCP\SOLID.OCP.csproj", "{8933D6DD-C0DF-403F-989A-7C4769D3059B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID.OCP", "SOLID.OCP\SOLID.OCP.csproj", "{8933D6DD-C0DF-403F-989A-7C4769D3059B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.LSP", "SOLID.LSP\SOLID.LSP.csproj", "{2483FE58-739F-4251-B753-35CE451A04C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8933D6DD-C0DF-403F-989A-7C4769D3059B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8933D6DD-C0DF-403F-989A-7C4769D3059B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8933D6DD-C0DF-403F-989A-7C4769D3059B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2483FE58-739F-4251-B753-35CE451A04C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2483FE58-739F-4251-B753-35CE451A04C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2483FE58-739F-4251-B753-35CE451A04C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2483FE58-739F-4251-B753-35CE451A04C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
