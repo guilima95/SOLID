@@ -10,7 +10,7 @@ public class ClientService
 
         var clientRepository = new ClientRepository();
 
-        ClientRepository.AddClient(client);
+        clientRepository.AddClient(client);
 
         SendEmail("xpto@company.com",
             client.Email.Address, "Welcome to",

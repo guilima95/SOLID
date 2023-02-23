@@ -1,5 +1,4 @@
-﻿using SOLID.LSP;
-using SOLID.LSP.After;
+﻿using SOLID.LSP.After;
 using SOLID.LSP.Before;
 
 Menu();
@@ -14,7 +13,7 @@ switch (option.KeyChar)
         break;
 
     case '2':
-        Console.WriteLine(" Let's go, for example, the code using the solution LSP principle with the way correctly. When a subclass is a to class, this inheritance do sense.");        
+        Console.WriteLine(" Let's go, for example, the code using the solution LSP principle with the way correctly. When a subclass is a to class, this inheritance do sense.");
         AfterCorrectlyPrinciple();
         Console.WriteLine("The LSP says that if you change the parent class to the child, nothing should change");
         break;
@@ -114,11 +113,4 @@ public class Client
     {
         return Date.Year > 2020;
     }
-}
-
-public enum TypeClient
-{
-    Gold,
-    Silver,
-    Bronze
 }
